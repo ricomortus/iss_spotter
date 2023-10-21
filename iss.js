@@ -76,15 +76,11 @@ const nextISSTimesForMyLocation = function(callback) {
         // console.log('ISS Flyover data:' , flyover);
         for (const time of flyover) {
           console.log(`Next pass at ${new Date(time.risetime * 1000).toUTCString()} for ${time.duration} seconds`);
-
         }
-
-    
       });
     });
   });
 };
-
 // Don't need to export the other function since we are not testing it right now.
 module.exports = { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation };
 
